@@ -44,7 +44,9 @@ jobs:
           git clone https://github.com/itspriddle/notes.git content
           rm -rf content/.git content/.github
       - name: Build site
-        run: npx quartz build --bundleInfo
+        run: |
+          npm install
+          npx quartz build --bundleInfo
       - name: Write CNAME
         run: echo "notes.priddle.xyz" > content/CNAME
       - name: Upload artifact
