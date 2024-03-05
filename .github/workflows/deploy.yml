@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     if: ${{ github.repository == 'itspriddle/quartz' }}
+    runs-on: ubuntu-latest
     permissions:
       actions: write
     steps:
@@ -16,4 +17,3 @@ jobs:
         env:
           # https://github.com/settings/tokens?type=beta, expires 2025-03-03
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-
