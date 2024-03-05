@@ -11,9 +11,7 @@ const config: QuartzConfig = {
     pageTitle: "~/notes",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
+    analytics: null,
     locale: "en-US",
     baseUrl: "notes.priddle.xyz",
     ignorePatterns: ["private", "templates", ".obsidian", "README.md", "LICENSE"],
