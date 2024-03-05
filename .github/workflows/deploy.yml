@@ -1,0 +1,19 @@
+name: Deploy site
+
+on:
+  push:
+    branches:
+      - v4
+
+jobs:
+  deploy:
+    if: ${{ github.repository == 'itspriddle/quartz' }}
+    permissions:
+      actions: write
+    steps:
+      - name: Build itspriddle/notes.priddle.xyz
+        run: gh workflow run deploy.yml -R itspriddle/notes.priddle.xyz
+        env:
+          # https://github.com/settings/tokens?type=beta, expires 2025-03-03
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
