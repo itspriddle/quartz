@@ -17,7 +17,7 @@ const config: QuartzConfig = {
     locale: "en-US",
     baseUrl: "notes.priddle.xyz",
     ignorePatterns: ["private", "templates", ".obsidian"],
-    defaultDateType: "created",
+    defaultDateType: "modified",
     theme: {
       cdnCaching: true,
       typography: {
