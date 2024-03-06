@@ -3,7 +3,7 @@ name: Deploy site
 on:
   push:
     branches:
-      - v4
+      - v4-josh
 
 jobs:
   deploy:
